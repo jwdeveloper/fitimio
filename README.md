@@ -1,61 +1,37 @@
-# Fitimio - AI Diet, Nutrition, Workout, and Health Tracker MCP Server
+<p align="center">
+  <img src="assets/logo.svg" width="120" alt="Fitimio logo" />
+</p>
 
-Fitimio is a personal nutrition and fitness tracker built around the Model Context Protocol (MCP). It connects your real diet, workout, goals, supplements, shopping list, body metrics, and health-context data to AI assistants like ChatGPT, Claude, and other MCP-compatible clients.
+<h1 align="center">Fitimio</h1>
 
-Instead of asking generic diet questions and getting guesses, Fitimio lets your AI assistant answer using your actual logged meals, remaining calories, macro targets, workouts, notes, restrictions, and progress.
+<p align="center">
+  <b>AI diet, nutrition, workout, and health tracker MCP server for ChatGPT and Claude.</b>
+</p>
 
-## What Fitimio Does
+<p align="center">
+  Give your AI assistant real meals, macros, workouts, goals, supplements, shopping lists, body metrics, and health context instead of making it guess.
+</p>
 
-- Track daily calories and macros
-- Set and monitor nutrition, workout, and health goals
-- Track workouts and training plans
-- Save health, diet, allergy, condition, and preference notes
-- Track weight and body measurements
-- Scan food barcodes and save nutrition data
-- Build reusable meals and meal templates
-- Track supplements and shopping lists
-- Display an interactive dashboard directly inside ChatGPT or Claude
+<p align="center">
+  <a href="https://fitimio.com"><img alt="Website" src="https://img.shields.io/badge/website-fitimio.com-d97706?style=for-the-badge"></a>
+  <a href="https://fitimio.com/mcp"><img alt="MCP endpoint" src="https://img.shields.io/badge/MCP-remote_server-111827?style=for-the-badge"></a>
+  <img alt="OAuth required" src="https://img.shields.io/badge/auth-OAuth_required-2563eb?style=for-the-badge">
+  <img alt="Status" src="https://img.shields.io/badge/status-public_beta-16a34a?style=for-the-badge">
+</p>
 
-## Example Questions
+---
 
-After connecting Fitimio to your AI assistant, you can ask:
+## Introduction
 
-- What did I eat today?
-- How much protein am I missing?
-- Plan a dinner that keeps me under 1,700 kcal today.
-- What should I eat after today's workout?
-- Remember that I should not eat tomatoes.
-- Show me my dashboard.
-- How has my weight changed recently?
-- What is on my shopping list for Friday?
+Fitimio is a personal nutrition and fitness tracker built around the Model Context Protocol (MCP).
 
-## Use Cases
+It connects your saved diet and health context to AI assistants like ChatGPT, Claude, and other MCP-compatible clients. Instead of asking generic nutrition questions, you can ask your assistant questions based on what you actually ate, what your goals are, what workout is planned, what supplements you take, and what restrictions or preferences you saved.
 
-### Daily Nutrition Check
+Fitimio is for people who already spend more time with AI assistants than with separate tracking apps.
 
-Ask your assistant what you ate today and Fitimio can show calories, macros, meals, water, supplements, and progress toward your daily goals.
-
-### Remaining Macros Planning
-
-Ask for a dinner idea based on what you have already eaten, your remaining calories, and your protein target.
-
-### Barcode Food Lookup
-
-Scan a barcode and ask whether the product fits your day. Fitimio can return calories, macros, sugar, fat, and other nutrition details.
-
-### Workout and Progress Context
-
-Track planned workouts, completed sessions, weight changes, measurements, and trends so your assistant can reason from your real history.
-
-### Health-Aware Food Context
-
-Save diet notes, allergies, conditions, or food restrictions so your assistant can avoid suggestions that do not fit your personal context.
-
-## MCP Server
+## MCP Endpoint
 
 Fitimio is a remote MCP server.
-
-Production endpoint:
 
 ```text
 https://fitimio.com/mcp
@@ -63,23 +39,121 @@ https://fitimio.com/mcp
 
 OAuth authentication is required.
 
-## Who It Is For
+## What You Can Ask
 
-Fitimio is for people who already use AI assistants and want one place for nutrition, workouts, body metrics, goals, supplements, and health-context tracking.
+After connecting Fitimio, ask your AI assistant:
 
-It is especially useful if you:
+```text
+What did I eat today?
+```
 
-- Track calories, macros, protein, or body weight
-- Use ChatGPT or Claude daily
-- Want your AI assistant to know your current diet context
-- Prefer asking natural-language questions instead of opening many separate tracking apps
-- Want nutrition, workout, and health notes in one connected system
+```text
+How much protein am I missing?
+```
 
-## Important Safety Note
+```text
+Plan a dinner that keeps me under 1700 kcal today.
+```
 
-Fitimio is not a medical device and does not provide diagnosis or medical treatment. It is a tracking and context tool. For medical decisions, talk to a qualified healthcare professional.
+```text
+Remember that I should not eat tomatoes.
+```
+
+```text
+Show me my dashboard.
+```
+
+```text
+How has my weight changed recently?
+```
+
+## Features
+
+- Track daily calories, protein, carbs, fat, and other nutrition data
+- Set daily and long-term goals
+- Track workouts and planned training
+- Save health notes, diet notes, restrictions, allergies, and preferences
+- Track weight, body measurements, and progress
+- Scan food barcodes and store nutrition data
+- Create reusable meals and meal templates
+- Track supplements and shopping lists
+- Open interactive dashboard widgets inside ChatGPT or Claude
+
+## Use Cases
+
+### Daily Nutrition Check
+
+Ask what you ate today and Fitimio can show calories, macros, meals, water, supplements, and progress toward your goals.
+
+### Remaining Macros Planning
+
+Ask for a dinner idea based on your remaining calories, protein target, preferences, and what you already logged.
+
+### Barcode Food Lookup
+
+Scan a barcode and ask whether the product fits your day. Fitimio can return calories, macros, sugar, fat, and other useful nutrition details.
+
+### Workout and Progress Context
+
+Track planned workouts, completed sessions, body weight, measurements, and trends so your assistant can answer from real history.
+
+### Health-Aware Food Context
+
+Save food restrictions, allergies, conditions, or diet notes so your assistant can avoid suggestions that do not match your context.
+
+## Why Fitimio
+
+Most tracking stacks are split across many apps:
+
+- one app for calories
+- one app for workouts
+- one app for weight
+- one app for notes
+- one app for shopping lists
+
+Fitimio keeps the context in one place and exposes it through MCP, so your AI assistant can help with practical questions:
+
+- what changed
+- what is missing
+- what to eat next
+- what to buy
+- how your plan is going
+
+## Example Workflow
+
+1. Connect Fitimio to ChatGPT or Claude.
+2. Log meals, scan foods, or import your day.
+3. Ask: `What did I eat today?`
+4. Ask: `What should I eat for dinner based on my remaining macros?`
+5. Open the Fitimio dashboard directly inside the assistant.
+
+## For MCP Clients
+
+Server URL:
+
+```text
+https://fitimio.com/mcp
+```
+
+Authentication:
+
+```text
+OAuth 2.0
+```
+
+Supported client types:
+
+- ChatGPT MCP connectors
+- Claude MCP connectors
+- custom MCP clients with remote server support
+
+## Safety Note
+
+Fitimio is not a medical device. It does not diagnose, treat, or replace a doctor, dietitian, or other healthcare professional.
+
+Fitimio is a tracking and context tool. Use it to organize your own data and ask better questions, not as a substitute for medical advice.
 
 ## Keywords
 
-AI diet tracker, nutrition MCP server, ChatGPT diet tracker, Claude nutrition tracker, MCP health tracker, AI workout tracker, macro tracking MCP, calorie tracking MCP, personal health context for AI assistants.
+AI diet tracker, nutrition MCP server, ChatGPT diet tracker, Claude nutrition tracker, MCP health tracker, AI workout tracker, macro tracking MCP, calorie tracking MCP, personal health context for AI assistants, barcode nutrition tracker, AI meal planner.
 
