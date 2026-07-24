@@ -21,6 +21,56 @@
 
 ---
 
+## Installation
+
+Fitimio is a remote MCP server. You only need the server URL:
+
+```text
+https://fitimio.com/mcp
+```
+
+### ChatGPT
+
+1. Open ChatGPT connector settings.
+2. Add a custom MCP connector.
+3. Paste the Fitimio server URL:
+
+```text
+https://fitimio.com/mcp
+```
+
+4. Sign in with OAuth when ChatGPT asks.
+5. Ask: `Show me my dashboard.`
+
+### Claude
+
+1. Open Claude connectors.
+2. Add a custom connector.
+3. Paste the Fitimio server URL:
+
+```text
+https://fitimio.com/mcp
+```
+
+4. Sign in with OAuth when Claude asks.
+5. Ask: `What did I eat today?`
+
+### Custom MCP Clients
+
+Use Fitimio as a remote MCP server:
+
+```json
+{
+  "mcpServers": {
+    "fitimio": {
+      "url": "https://fitimio.com/mcp"
+    }
+  }
+}
+```
+
+OAuth authentication is required.
+
 ## Introduction
 
 Fitimio is a personal nutrition and fitness tracker built around the Model Context Protocol (MCP).
@@ -28,16 +78,6 @@ Fitimio is a personal nutrition and fitness tracker built around the Model Conte
 It connects your saved diet and health context to AI assistants like ChatGPT, Claude, and other MCP-compatible clients. Instead of asking generic nutrition questions, you can ask your assistant questions based on what you actually ate, what your goals are, what workout is planned, what supplements you take, and what restrictions or preferences you saved.
 
 Fitimio is for people who already spend more time with AI assistants than with separate tracking apps.
-
-## MCP Endpoint
-
-Fitimio is a remote MCP server.
-
-```text
-https://fitimio.com/mcp
-```
-
-OAuth authentication is required.
 
 ## What You Can Ask
 
@@ -156,4 +196,3 @@ Fitimio is a tracking and context tool. Use it to organize your own data and ask
 ## Keywords
 
 AI diet tracker, nutrition MCP server, ChatGPT diet tracker, Claude nutrition tracker, MCP health tracker, AI workout tracker, macro tracking MCP, calorie tracking MCP, personal health context for AI assistants, barcode nutrition tracker, AI meal planner.
-
